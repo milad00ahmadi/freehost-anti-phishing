@@ -4,7 +4,7 @@ This script intended to protect users from online phishing attacks
 Right now this script can recognize following fake pages(others will be added soon ❤️):
 - [x] IPG gateways
 - [x] Instagram
-- [ ] GMAIL
+- [x] GMAIL
 - [ ] Facebook
 - [ ] PUBG
 - [ ] Twitter
