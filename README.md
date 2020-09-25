@@ -28,7 +28,7 @@ npm run build
 Change settings on `/src/config.ts`
 
 ## Deploy
-first Upload `dist/bundle.js` file to you'r host
+first Upload `dist/bundle.js` file to your host
 then submit the following snippet in `Client Site Advert Control` section of your Admin panel 
 
 ```js
