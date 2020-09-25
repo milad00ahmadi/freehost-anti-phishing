@@ -11,7 +11,6 @@ Right now this script can recognize following fake pages(others will be added so
 - [ ] VK
 
 ## Setup
-
 First install dependencies:
 
 ```sh
@@ -28,7 +27,7 @@ npm run build
 
 Change settings on `/src/config.ts`
 
-## Deply
+## Deploy
 first Upload `dist/bundle.js` file to you'r host
 then submit the following snippet in `Client Site Advert Control` section of your Admin panel 
 
