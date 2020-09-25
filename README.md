@@ -11,6 +11,7 @@ Right now script can recognize following fake pages(others will be added soon â
 - [ ] VK
 
 ## Setup
+> Warning: before downloading script please make sure you have a fresh version of Node.js installed
 First install dependencies:
 
 ```sh
@@ -19,13 +20,16 @@ or
 yarn install
 ```
 
-To create a production build:
+Then Change settings based on your brand on `/src/config.ts` (don't remove double quotes)
 
+create a production build with:
+F
 ```sh
 npm run build
+or
+yarn build
 ```
 
-Change settings on `/src/config.ts`
 
 ## Deploy
 first Upload `dist/bundle.js` file to your host
