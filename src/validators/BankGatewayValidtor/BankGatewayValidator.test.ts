@@ -23,7 +23,7 @@ test("don't alert on non-suspicious pages", () => {
       <h1>I am a good page</h1>
   `;
   const result = bankGatewayValidator.handle(
-    document.querySelector('html')?.outerHTML.toLocaleLowerCase() || ''
+    document.querySelector('html')?.outerHTML.toLocaleLowerCase() || 'in'
   );
   expect(result).toBe(true);
 });

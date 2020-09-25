@@ -1,2 +1,2 @@
-export const CONTACT_EMAIL = 'یاس هاستینگ';
-export const COMPANY = 'supp.yashosting@gmail.com';
+export const CONTACT_EMAIL = 'supp.yashosting@gmail.com';
+export const COMPANY = 'یاس هاستینگ';

@@ -5,11 +5,10 @@ const bankValidator = new BankGatewayValidator();
 const instagramValidtor = new InstagramValidor();
 
 bankValidator.setNext(instagramValidtor);
-
 const checker = () => {
-  let pageContent: string | undefined =
-    document.querySelector('body')?.outerHTML ||
-    document.querySelector('html')?.outerHTML;
+  let pageContent: string | undefined = new XMLSerializer().serializeToString(
+    document
+  );
 
   // tmamae character haye ـ ro hazf mikonim. in kar
   // az in ke karbar kalame درگاه ro be sorate درگـاه benevise jologiri mikone
@@ -23,6 +22,6 @@ const checker = () => {
     window.location.href = 'https://google.com';
   }
 };
-
+checker();
 // check page on a interval
-setInterval(checker, 3000);
+setTimeout(checker, 10000);

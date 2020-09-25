@@ -176,13 +176,14 @@
         line-height: 200% !important;
         color: #455a64 !important;
         direction: rtl;
+        font-size: 16px;
       "
     >
       محافظ فیشینگ در این صفحه اطلاعاتی را پیدا کرده است که ممکن است باعث هک شدن
       شما شود. لطفا در صورت درخواست شماره کارت، رمز عبور و ... فورا این صفحه را
       ترک و اطلاعات این دامنه را به آدرس
       <a
-        href="mailto:#{contactEmail}"
+        href="mailto:{{ contactEmail }}"
         style="color: #3f51b5; text-decoration: none"
         >{{ contactEmail }}</a
       >
@@ -203,7 +204,7 @@
     >
       <a
         href="#"
-        onclick="document.querySelector('.yas-modal').style.display = 'none'"
+        onclick="this.parentElement.parentElement.parentElement.style.display = 'none'"
         style="
           font-family: 'Vazir' !important;
           font-size: 16px !important;
