@@ -12,8 +12,8 @@ Right now script can recognize following fake pages(others will be added soon â
 
 ## Setup
 > Warning: before downloading script please make sure you have a fresh version of Node.js installed
-First install dependencies:
 
+First install dependencies:
 ```sh
 npm install
 or
