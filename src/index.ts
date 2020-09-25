@@ -1,4 +1,4 @@
-import GmailValidator from 'validators/GmailValidator/GmailValidator';
+import GmailValidator from './validators/GmailValidator/GmailValidator';
 import BankGatewayValidator from './validators/BankGatewayValidtor/BankGatewayValidator';
 import InstagramValidor from './validators/InstagramValidator/InstagramValidator';
 

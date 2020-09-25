@@ -1,7 +1,7 @@
 # Anti-phishing script for free hosting providers
 This script intended to protect users from online phishing attacks
 
-Right now this script can recognize following fake pages(others will be added soon ❤️):
+Right now script can recognize following fake pages(others will be added soon ❤️):
 - [x] IPG gateways
 - [x] Instagram
 - [x] GMAIL
