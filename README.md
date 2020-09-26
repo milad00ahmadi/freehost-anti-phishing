@@ -20,7 +20,7 @@ or
 yarn install
 ```
 
-Then Change settings based on your brand on `/src/config.ts` (don't remove double quotes)
+Rename `config.ts.example` filename to `config.ts` then Change settings based on your brand on `/src/config.ts` (don't remove double quotes)
 
 create a production build with:
 F
@@ -32,7 +32,7 @@ yarn build
 
 
 ## Deploy
-first Upload `dist/bundle.js` file to your host
+First upload `dist/bundle.js` file to your host
 then submit the following snippet in `Client Site Advert Control` section of your Admin panel 
 
 ```js
