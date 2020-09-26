@@ -1,13 +1,15 @@
 import GmailValidator from './validators/GmailValidator/GmailValidator';
 import BankGatewayValidator from './validators/BankGatewayValidtor/BankGatewayValidator';
 import InstagramValidor from './validators/InstagramValidator/InstagramValidator';
+import AlertModalView from './views/alert-modal';
 
-const bankValidator = new BankGatewayValidator();
-const instagramValidtor = new InstagramValidor();
-const gmailValidator = new GmailValidator();
-
-bankValidator.setNext(instagramValidtor).setNext(gmailValidator);
 const checker = () => {
+  const bankValidator = new BankGatewayValidator();
+  const instagramValidtor = new InstagramValidor();
+  const gmailValidator = new GmailValidator();
+
+  bankValidator.setNext(instagramValidtor).setNext(gmailValidator);
+
   let pageContent: string | undefined = new XMLSerializer().serializeToString(
     document
   );
@@ -19,7 +21,10 @@ const checker = () => {
   // checkesh konim baraye hamin agar pagi in ro nadasht karbar ro redirect
   // mikonim be google.com
   if (pageContent) {
-    bankValidator.handle(pageContent);
+    const isSafe = bankValidator.handle(pageContent);
+    if (!isSafe) {
+      AlertModalView.render();
+    }
   } else {
     window.location.href = 'https://google.com';
   }

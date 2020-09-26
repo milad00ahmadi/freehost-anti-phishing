@@ -13,12 +13,11 @@ class BankGatewayValidator extends BaseValidator {
       .checkForTextsAmountAndAcceptor()
       .checkForInputs();
 
-    if (this.score < 3) {
+    if (this.score < 12) {
       if (!this.nextValidator) return true;
       return this.nextValidator.handle(content);
     }
     
-    this.alertUser();
     return false;
   }
 

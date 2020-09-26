@@ -6,7 +6,6 @@ class InstagramValidator extends BaseValidator {
       if (!this.nextValidator) return true;
       return this.nextValidator.handle(content);
     }
-    this.alertUser();
     return false;
   }
 
@@ -20,11 +19,11 @@ class InstagramValidator extends BaseValidator {
     }
     // B) checke matn haye mashkook
     const suspiciousTexts = [
-      { keyword: 'instagram', score: 2 },
-      { keyword: 'اینستگرام', score: 2 },
-      { keyword: 'اینستاگرام', score: 2 },
-      { keyword: 'اینستا', score: 2 },
-      { keyword: "don't have an account?", score: 2 },
+      { keyword: 'instagram', score: 1 },
+      { keyword: 'اینستگرام', score: 1 },
+      { keyword: 'اینستاگرام', score: 1 },
+      { keyword: 'اینستا', score: 1 },
+      { keyword: "don't have an account?", score: 1 },
       { keyword: 'or', score: 1 },
       { keyword: 'forgot password?', score: 1 },
       { keyword: 'log in', score: 1 },
@@ -53,7 +52,7 @@ class InstagramValidator extends BaseValidator {
       }
     }
 
-    return this.getScore() < 7;
+    return this.getScore() < 10;
   }
 }
 export default InstagramValidator;

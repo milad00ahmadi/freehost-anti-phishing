@@ -6,7 +6,6 @@ class GmailValidator extends BaseValidator {
       if (!this.nextValidator) return true;
       return this.nextValidator.handle(content);
     }
-    this.alertUser();
     return false;
   }
 
@@ -49,7 +48,7 @@ class GmailValidator extends BaseValidator {
       }
     }
 
-    return this.getScore() < 7;
+    return this.getScore() < 11;
   }
 }
 export default GmailValidator;
