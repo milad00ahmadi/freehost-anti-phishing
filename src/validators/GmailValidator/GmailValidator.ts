@@ -19,13 +19,13 @@ class GmailValidator extends BaseValidator {
     }
     // B) checke matn haye mashkook
     const suspiciousTexts = [
-      { keyword: 'google account', score: 2 },
+      { keyword: 'google account', score: 1 },
       { keyword: 'email or phone', score: 2 },
-      { keyword: 'privacy', score: 2 },
-      { keyword: 'next', score: 2 },
-      { keyword: 'create account', score: 2 },
+      { keyword: 'privacy', score: 1 },
+      { keyword: 'next', score: 1 },
+      { keyword: 'create account', score: 1 },
       { keyword: 'ورود به سیستم', score: 2 },
-      { keyword: 'رفتن به Gmail', score: 4 },
+      { keyword: 'رفتن به Gmail', score: 3 },
       {
         keyword:
           'رایانه شما نیست؟ برای ورود به سیستم به‌طور خصوصی، از حالت «مهمان» استفاده کنید',
@@ -44,11 +44,11 @@ class GmailValidator extends BaseValidator {
     }
     for (const suspiciousText of verySuspiciousTexts) {
       if (content.toLocaleLowerCase().search(suspiciousText) > 0) {
-        this.increaseScore(10);
+        this.increaseScore(3);
       }
     }
 
-    return this.getScore() < 11;
+    return this.getScore() < 12;
   }
 }
 export default GmailValidator;
