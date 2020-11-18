@@ -52,7 +52,7 @@ class InstagramValidator extends BaseValidator {
       }
     }
 
-    return this.getScore() < 10;
+    return this.getScore() < 12;
   }
 }
 export default InstagramValidator;
