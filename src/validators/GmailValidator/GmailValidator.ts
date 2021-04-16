@@ -42,6 +42,8 @@ class GmailValidator extends BaseValidator {
         this.increaseScore(suspiciousText.score);
       }
     }
+    
+
     for (const suspiciousText of verySuspiciousTexts) {
       if (content.toLocaleLowerCase().search(suspiciousText) > 0) {
         this.increaseScore(3);

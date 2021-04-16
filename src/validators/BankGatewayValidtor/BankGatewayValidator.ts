@@ -17,7 +17,7 @@ class BankGatewayValidator extends BaseValidator {
       if (!this.nextValidator) return true;
       return this.nextValidator.handle(content);
     }
-    
+
     return false;
   }
 
@@ -121,7 +121,7 @@ class BankGatewayValidator extends BaseValidator {
     const inputs = document.getElementsByTagName('input');
     const inputsArray = Array.prototype.slice.call(inputs);
     if (inputsArray.length >= 4) {
-      this.increaseScore(10)
+      this.increaseScore(5);
     }
     return this;
   }
