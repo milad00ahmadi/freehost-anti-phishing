@@ -1,0 +1,9 @@
+{
+  "rootDir":"src/",
+  "verbose": true,
+  "testEnvironment": "jsdom",
+  "moduleDirectories": ["node_modules", "src"],
+  "moduleNameMapper": {
+    "~/(.*)": "<rootDir>/$1"
+  }
+}
