@@ -5,6 +5,5 @@
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties",
-      "transform-html-import-require-to-string"
     ]
 }
