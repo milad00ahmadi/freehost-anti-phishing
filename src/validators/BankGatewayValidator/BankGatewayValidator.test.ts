@@ -14,7 +14,7 @@ test('alert that the payment page is fake', () => {
   const result = bankGatewayValidator.handle(
     document.querySelector('html')?.outerHTML.toLocaleLowerCase() || ''
   );
-  expect(result).toBe(false);
+  expect(result).toBe(true);
 });
 
 test("don't alert on non-suspicious pages", () => {
