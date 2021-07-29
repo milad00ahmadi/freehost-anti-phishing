@@ -1,0 +1,344 @@
+head
+  meta(charset='utf-8')
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css')
+  style.
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    background-color: #E9EBEE;
+    font-family: 'Lucida Grande', tahoma,verdana,arial,sans-serif;
+    font-style: normal;
+    }
+    header a {
+    color: #b0bcd5;
+    text-decoration: none;
+    font-family: sans-serif;
+    }
+    .formulaire {
+    width: 480px;
+    display: flex;
+    align-items: flex-end;
+    }
+    .formulaire div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    }
+    .container {
+    margin: 8px 0 0 200px;
+    font-size: 12px;
+    }
+    header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #3B5998;
+    color: white;
+    }
+    label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    }
+    .btn {
+    background-color: #516ac1;
+    border: solid rgba(0, 0, 0, 0.3) 0.1em;
+    color: white;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    padding: 5px 6px;
+    margin-bottom: -1px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: -5px;
+    outline: none;
+    }
+    .logo {
+    margin-top: 10px;
+    width: 174px;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    }
+    .forgot {
+    margin: 2px 0 0 200px;
+    color: #6d84b4;
+    }
+    input {
+    padding: 3px;
+    }
+    .left {
+    margin: 70px 650px 0 200px
+    }
+    .connect {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 24px;
+    margin-bottom: 100px;
+    }
+    .center_list {
+    list-style: none;
+    padding-bottom:10px;
+    margin-top:20px;
+    }
+    .list {
+    float: left;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    padding-bottom:20px;
+    }
+    .img-list {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    }
+    .right {
+    float: right;
+    margin-top: -380px;
+    margin-right: 230px;
+    }
+    .inputs {
+    margin-top: 25px
+    }
+    .input {
+    padding-left: 10px;
+    font-size: 19px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(78, 78, 78, 0.5);
+    height: 40px;
+    }
+    .input_1 {
+    width: 190px;
+    }
+    .input_2 {
+    width: 385px;
+    }
+    select {
+    margin-top: 6px;
+    padding: 6px;
+    margin-left: -6px
+    }
+    .why {
+    margin: -30px 0 0 195px;
+    font-size: 10px;
+    font-family: sans-serif;
+    }
+    .terms {
+    font-size: 10px;
+    width: 306px;
+    margin-top: 10px;
+    margin-bottom:30px;
+    color: rgba(0, 0, 0, 0.6)
+    }
+    .terms_a {
+    text-decoration: none;
+    color: #32549b;
+    }
+    .signUp {
+    margin-top:100px;
+    margin-bottom:5px;
+    font-family: 'Open Sans',sans-serif;
+    text-rendering:optimizelegibility;
+    color:#333;
+    }
+    .signUpSub {
+    font-size:16px;
+    margin-bottom:20px;
+    color:#333;
+    }
+    .signUpBtn {
+    text-decoration:none;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#fff;
+    min-width: 194px;
+    padding: 7px 20px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    background: -webkit-linear-gradient(#67ae55, #578843);
+    -webkit-box-shadow: inset 0 1px 1px #a4e388;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    margin-top: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    cursor:pointer;
+    }
+    .signUpBtn:hover {
+    background: -webkit-linear-gradient(#79bc64, #578843);
+    }
+    .signUpBtn:active {
+    position: relative;
+    top: 1px;
+    }
+    .formbox {
+    display: inline-block;
+    width:399px;
+    }
+    .create {
+    border-top: 1px solid #a0a9c0;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom:30px;
+    padding-top: 15px;
+    }
+    .create a {
+    text-decoration:none;
+    }
+    .male, .female {
+    font-size:16px;
+    }
+header
+  .logo facebook
+  .container
+    form.formulaire
+      .userMail
+        label(for='mail') Email or Phone
+        input#mail(type='text')
+      .password
+        label(for='password') Password
+        input#password(type='password')
+      input.btn(type='submit' value='Login')
+    .forgot
+      a(href='#') Forgot account?
+.left
+  h2.connect
+    | Connect with friends and the
+    br
+    |         world around you on Facebook.
+  ul.center_list
+    li.list
+      img.img-list(src='https://fb-s-d-a.akamaihd.net/h-ak-xft1/v/t39.2365-6/851565_602269956474188_918638970_n.png?oh=894e994a5ae3ec3434da54fe42e31e72&oe=5971E6F5&__gda__=1500718098_effe0b8bd493ae0c23cc14fa99bda630')
+      big See photos and updates
+      small from friends in News Feed.
+    li.list
+      img.img-list(src='https://fb-s-c-a.akamaihd.net/h-ak-xaf1/v/t39.2365-6/851585_216271631855613_2121533625_n.png?oh=ae821220803265e80c0c261997b83a1b&oe=59295120&__gda__=1499782408_8fd3d0bad1815952ce6195f4e9c363df')
+      big Share what&apos;s new
+      small in your life on your Timeline.
+    li.list
+      img.img-list.last(src='https://fb-s-b-a.akamaihd.net/h-ak-xft1/v/t39.2365-6/851558_160351450817973_1678868765_n.png?oh=8de3304d724a879592bcc3fe9f967dcd&oe=5959B4D8&__gda__=1499970870_5087f0141d0ed913a7092687c8c10213')
+      big Find more
+      small of what you&apos;re looking for with Facebook Search.
+.right
+  h1.signUp Sign Up
+  h4.signUpSub It&rsquo;s free and always will be.
+  .inputs
+    input.input.input_1(type='text' placeholder='First name')
+    input.input.input_1(type='text' placeholder='Last name')
+    br
+    input.input.input_2(type='text' placeholder='Mobile number or email')
+    br
+    input.input.input_2(type='text' placeholder='Re-enter mobile number or email')
+    br
+    input.input.input_2(type='password' placeholder='New password')
+  div
+    h4 Birthday
+    select.month
+      option Month
+      option Jan
+      option Feb
+      option Mar
+      option Apr
+      option May
+      option Jun
+      option Jul
+      option Aug
+      option Sep
+      option Oct
+      option Nov
+      option Dec
+    select.day
+      option Day
+      option 1
+      option 2
+      option 3
+      option 4
+      option 5
+      option 6
+      option 7
+      option 8
+      option 9
+      option 10
+      option 11
+      option 12
+      option 13
+      option 14
+      option 15
+      option 16
+      option 17
+      option 18
+      option 19
+      option 20
+      option 21
+      option 22
+      option 23
+      option 24
+      option 25
+      option 26
+      option 27
+      option 28
+      option 29
+      option 30
+      option 31
+    select.year
+      option Year
+      option 2016
+      option 2015
+      option 2014
+      option 2013
+      option 2012
+      option 2011
+      option 2010
+      option 2009
+      option 2008
+      option 2007
+      option 2006
+      option 2005
+      option 2004
+      option 2003
+      option 2002
+      option 2001
+      option 2000
+      option 1999
+      option 1998
+      option 1997
+      option 1996
+      option 1995
+      option 1994
+      option 1993
+      option 1992
+      option 1991
+      option 1990
+    .why
+      a(style='text-decoration:none; color:#3c6ed6;' href='#')
+        | Why do I need to provide 
+        br
+        | my birthday?
+  div(style='margin-top: 20px;')
+    input#female(name='gender' type='radio')
+    label.female(for='female') Female
+    input#male(name='gender' type='radio')
+    label.male(for='male') Male
+  .terms
+    p
+      | By clicking Sign Up, you agree to our 
+      a.terms_a(href='#') Terms
+      |  and that you have read our 
+      a.terms_a(href='#') Data Policy
+      | , including our 
+      a.terms_a(href='#') Cookie Use
+      | .
+  div
+    a.signUpBtn(href='') Create Account
+  .formbox
+    .create
+      a(href='') Create a Page
+      |  for a celebrity, band or business.
+| Resources1&times; 0.5&times; 0.25&times;Rerun

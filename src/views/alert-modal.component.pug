@@ -1,0 +1,8 @@
+div(class=styles.alert class=isRtl ? styles.rtl : '')
+  div(class=styles.card)
+    h1
+      | #{warningMessageTitle}
+    p= warningMessage
+    div(class=styles.cardActions)
+      a(href='#' onclick="this.parentElement.parentElement.parentElement.style.display = 'none'" class=styles.ignoreButton)= continueAnywayButtonText
+      a(href='#' onclick='window.history.back()' class=styles.backButton)= backButtonText

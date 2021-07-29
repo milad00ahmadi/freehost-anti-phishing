@@ -1,0 +1,123 @@
+.alert {
+  --font: 'Roboto';
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: none;
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: scroll;
+  z-index: 2147483647;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px) saturate(150%);
+    background-color: rgba(230, 57, 70, 0.3);
+    z-index: -1;
+  }
+
+  h1 {
+    font-family: var(--font);
+    color: #263238;
+    text-align: center;
+    line-height: 200%;
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+  p {
+    font-family: var(--font);
+    line-height: 200%;
+    color: #455a64;
+    font-size: 18px;
+    text-align: left;
+  }
+}
+.card {
+  width: 60vw;
+  min-width: 320px;
+  min-height: 512px;
+  background-color: #fff;
+  background-image: none;
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: scroll;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.backButton {
+  font-family: var(--font);
+  font-size: 16px;
+  display: inherit;
+  text-align: center;
+  color: #3f51b5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(63, 81, 181, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 18px;
+  padding-left: 18px;
+  text-transform: uppercase;
+}
+.ignoreButton {
+  font-family: var(--font);
+  font-size: 16px;
+  display: inherit;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: 20px;
+  color: #757575;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 18px;
+  padding-left: 18px;
+  text-transform: uppercase;
+}
+
+.cardActions {
+  margin-top: auto;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.rtl {
+  direction: rtl;
+  --font: 'Vazir';
+  p {
+    text-align: right;
+  }
+  .cardActions {
+    direction: rtl;
+    left: 30px;
+    right: auto;
+  }
+}
