@@ -3,18 +3,18 @@ import BankGatewayValidator from '~/validators/BankGatewayValidator/BankGatewayV
 import InstagramValidor from '~/validators/InstagramValidator/InstagramValidator';
 import AlertModalView from '~/views/alert-modal.component';
 import OutlookValidator from '~/validators/OutlookValidator/OutlookValidator';
-import "~/assets/scss/app.scss";
+import '~/assets/scss/app.scss';
 import FacebookValidator from './validators/FacebookValidator/FacebookValidator';
-
-const bankValidator = new BankGatewayValidator();
-const instagramValidtor = new InstagramValidor();
-const gmailValidator = new GmailValidator();
-const outlookValidator = new OutlookValidator();
-const facebookValidator = new FacebookValidator();
 
 let isShowed = false;
 
 const checker = () => {
+  const bankValidator = new BankGatewayValidator();
+  const instagramValidtor = new InstagramValidor();
+  const gmailValidator = new GmailValidator();
+  const outlookValidator = new OutlookValidator();
+  const facebookValidator = new FacebookValidator();
+  
   bankValidator
     .setNext(instagramValidtor)
     .setNext(gmailValidator)
@@ -34,7 +34,6 @@ const checker = () => {
       isShowed = true;
       AlertModalView.render();
     }
-
   } else {
     window.location.href = 'https://google.com';
   }
