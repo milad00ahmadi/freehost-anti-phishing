@@ -10,9 +10,11 @@ test('alerts that the instagram login page is fake', () => {
       </body>
     </html>
   `;
-  const isPhishing = instagramValidator.handle(document.querySelector('html')?.outerHTML.toLocaleLowerCase() || '');
+  const isSafe = instagramValidator.handle(
+    document.querySelector('html')?.outerHTML.toLocaleLowerCase() || ''
+  );
 
-  expect(isPhishing).toBe(false);
+  expect(isSafe).toBe(true);
 });
 
 test("don't alert on normal pages", () => {
@@ -23,8 +25,10 @@ test("don't alert on normal pages", () => {
       </body>
     </html>
   `;
-  const isPhishing = instagramValidator.handle(document.querySelector('html')?.outerHTML.toLocaleLowerCase() || '');
-  expect(isPhishing).toBe(true);
+  const isSafe = instagramValidator.handle(
+    document.querySelector('html')?.outerHTML.toLocaleLowerCase() || ''
+  );
+  expect(isSafe).toBe(true);
 });
 test("don't alert on non-suspicious login pages", () => {
   const instagramValidator = new InstagramValidator();
@@ -37,6 +41,8 @@ test("don't alert on non-suspicious login pages", () => {
       </body>
     </html>
   `;
-  const isPhishing = instagramValidator.handle(document.querySelector('html')?.outerHTML.toLocaleLowerCase() || '');
-  expect(isPhishing).toBe(true);
+  const isSafe = instagramValidator.handle(
+    document.querySelector('html')?.outerHTML.toLocaleLowerCase() || ''
+  );
+  expect(isSafe).toBe(true);
 });

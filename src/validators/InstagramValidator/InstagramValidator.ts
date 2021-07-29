@@ -1,4 +1,5 @@
 import BaseValidator from '../BaseValidator';
+import { keywords } from './keywords';
 
 class InstagramValidator extends BaseValidator {
   public handle(content: string): boolean {
@@ -10,49 +11,20 @@ class InstagramValidator extends BaseValidator {
   }
 
   checkPage(content: string): boolean {
-    // A) checke tedade input ha
     const inputs = document.getElementsByTagName('input');
     const inputsArray = Array.prototype.slice.call(inputs);
 
     if (inputsArray.length >= 2) {
-      this.increaseScore(5);
+      this.increaseScore(2);
     }
-    // B) checke matn haye mashkook
-    const suspiciousTexts = [
-      { keyword: 'instagram', score: 1 },
-      { keyword: 'اینستگرام', score: 1 },
-      { keyword: 'اینستاگرام', score: 1 },
-      { keyword: 'اینستا', score: 1 },
-      { keyword: "don't have an account?", score: 1 },
-      { keyword: 'or', score: 1 },
-      { keyword: 'forgot password?', score: 1 },
-      { keyword: 'log in', score: 1 },
-      { keyword: 'login', score: 1 },
-    ];
-    const verySuspiciousTexts = [
-      'فالور رایگان',
-      'لایک رایگان',
-      'فالوور رایگان',
-      'فالوور خرید',
-      'خرید فالوور',
-      'free like',
-      'free followers',
-      'شارژ رایگان',
-      'اینترنت رایگان',
-    ];
 
-    for (const suspiciousText of suspiciousTexts) {
-      if (content.toLocaleLowerCase().search(suspiciousText.keyword) > 0) {
-        this.increaseScore(suspiciousText.score);
-      }
-    }
-    for (const suspiciousText of verySuspiciousTexts) {
-      if (content.toLocaleLowerCase().search(suspiciousText) > 0) {
-        this.increaseScore(10);
+    for (const keyword of keywords) {
+      if (content.toLocaleLowerCase().search(keyword.keyword) > 0) {
+        this.increaseScore(keyword.score);
       }
     }
 
-    return this.getScore() < 12;
+    return this.getScore() < 10;
   }
 }
 export default InstagramValidator;
