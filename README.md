@@ -11,7 +11,7 @@ Right now script can recognize following fake pages(others will be added soon â
 - [ ] Twitter
 - [ ] VK
 ## Preview
-![Preview](https://github.com/milad00ahmadi/milad00ahmadi/blob/freehost-anti-phishing/screenshot.png?raw=true)
+![Preview](https://raw.githubusercontent.com/milad00ahmadi/freehost-anti-phishing/master/screenshot.png)
 
 ## Setup
 > Warning: before downloading script please make sure you have a fresh version of Node.js installed
