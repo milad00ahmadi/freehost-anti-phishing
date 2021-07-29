@@ -3,7 +3,6 @@ dist/bundle.js
 dist/index.html
 node_modules/
 src/config.ts
-*.lock
 .env
 dist/*
 .vscode/
