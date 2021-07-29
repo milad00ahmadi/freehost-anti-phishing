@@ -1,4 +1,0 @@
-export const LTR = true
-export const WARNING_MESSAGE = ""
-export const BACK_BUTTON_VALUE = ""
-export const PROCCEED_ANWAY_TEXT = ""

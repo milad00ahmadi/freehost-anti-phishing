@@ -4,3 +4,4 @@ dist/index.html
 node_modules/
 src/config.ts
 *.lock
+.env
