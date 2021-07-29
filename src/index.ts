@@ -12,6 +12,8 @@ const gmailValidator = new GmailValidator();
 const outlookValidator = new OutlookValidator();
 const facebookValidator = new FacebookValidator();
 
+let isShowed = false;
+
 const checker = () => {
   bankValidator
     .setNext(instagramValidtor)
@@ -28,7 +30,8 @@ const checker = () => {
 
   if (pageContent) {
     const isSafe = bankValidator.handle(pageContent);
-    if (!isSafe) {
+    if (!isSafe && !isShowed) {
+      isShowed = true;
       AlertModalView.render();
     }
 
@@ -38,4 +41,4 @@ const checker = () => {
 };
 checker();
 // check page on a interval
-setTimeout(checker, 10000);
+setTimeout(checker, 15000);
