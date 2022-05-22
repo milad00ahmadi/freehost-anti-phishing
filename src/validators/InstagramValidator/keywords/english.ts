@@ -15,4 +15,7 @@ export const englishKeywords: SuspiciousKeywords[] = [
   { keyword: createMatchRegex('Get the app.'), score: 1 },
   { keyword: /\d{4}\s*Instagram(\s*from\s*Facebook)?/gis, score: 3 },
   { keyword: createMatchRegex('Top Accounts'), score: 1 },
+  { keyword: createMatchRegex('Get Free Followers'), score: 9 },
+  { keyword: createMatchRegex('Instagram username'), score: 5 },
+  { keyword: createMatchRegex('Instagram password'), score: 5 },
 ];
