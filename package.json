@@ -1,5 +1,5 @@
 {
-  "name": "yashosting_antiphishing",
+  "name": "mofh_antiphishing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,8 +15,7 @@
   },
   "dependencies": {
     "@types/mustache": "^4.1.2",
-    "dotenv-webpack": "^7.0.3",
-    "webpack-dev-server": "^3.11.2"
+    "dotenv-webpack": "^7.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -28,6 +27,7 @@
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
+    "@webdiscus/pug-loader": "^2.3.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
     "eslint": "^7.31.0",
@@ -44,7 +44,7 @@
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "pug": "^3.0.2",
-    "pug-loader": "^2.4.0",
+    "pug-plugin": "^2.5.1",
     "sass": "^1.36.0",
     "sass-loader": "^12.1.0",
     "source-map-loader": "^3.0.0",
@@ -55,6 +55,7 @@
     "typings-for-css-modules-loader": "^1.7.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.46.0",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
