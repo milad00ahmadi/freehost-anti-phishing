@@ -23,13 +23,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    backdrop-filter: blur(5px) saturate(150%);
+    backdrop-filter: blur(6px) saturate(150%);
     background-color: rgba(230, 57, 70, 0.3);
     z-index: -1;
   }
 
   h1 {
     font-family: var(--font);
+    font-size: 16px;
     color: #263238;
     text-align: center;
     line-height: 200%;
@@ -37,17 +38,18 @@
     margin-top: 16px;
   }
   p {
+    margin-top: 0.4rem;
     font-family: var(--font);
-    line-height: 200%;
+    line-height: 170%;
     color: #455a64;
-    font-size: 18px;
+    font-size: 13.5px;
     text-align: left;
   }
 }
 .card {
-  width: 60vw;
+  width: 480px;
   min-width: 320px;
-  min-height: 512px;
+  min-height: 250px;
   background-color: #fff;
   background-image: none;
   background-repeat: repeat;
@@ -66,7 +68,7 @@
 
 .backButton {
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 13px;
   display: inherit;
   text-align: center;
   color: #3f51b5;
@@ -85,7 +87,7 @@
 }
 .ignoreButton {
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 13px;
   display: inherit;
   text-align: center;
   margin-top: 10px;
