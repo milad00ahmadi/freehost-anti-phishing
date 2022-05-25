@@ -1,6 +1,6 @@
 // import '~/assets/scss/app.scss';
 import styles from './alert-modal.component.scss';
-const template = require('./alert-modal.component.pug');
+const template = require('./alert-modal.component.pug?pug-compile');
 
 class AlertModalView {
   static render(): void {
