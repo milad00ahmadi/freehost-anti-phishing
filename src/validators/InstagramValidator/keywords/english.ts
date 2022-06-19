@@ -5,7 +5,7 @@ import {
 } from '~/contracts/SuspiciousKeywords';
 
 export const englishKeywords: SuspiciousKeywords[] = [
-  { keyword: matchTitle('Logins*•Instagram'), score: 9 },
+  { keyword: matchTitle('Login\\s*Instagram'), score: 9 },
   { keyword: createMatchRegex("don't have an account?"), score: 1 },
   { keyword: createMatchRegex('or'), score: 1 },
   { keyword: createMatchRegex('forgot password?'), score: 1 },
